@@ -6,17 +6,10 @@
 /*   By: aponomar <aponomar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/21 02:58:20 by aponomar          #+#    #+#             */
-/*   Updated: 2019/12/22 22:35:34 by aponomar         ###   ########.fr       */
+/*   Updated: 2020/01/30 19:58:27 by aponomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// fucntions:
-        // 1 - get count lines from text-file
-        // 2 - get count value in line
-        // 3 - allocate memory for **int z_matrix
-        // 4 - read file
-        // 5 - write in matrix readed numbers
-        
 #include "fdf.h"
 
 int		get_height(char *file_name)
