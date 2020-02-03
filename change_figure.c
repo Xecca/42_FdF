@@ -6,7 +6,7 @@
 /*   By: aponomar <aponomar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/30 20:31:25 by aponomar          #+#    #+#             */
-/*   Updated: 2020/01/30 20:31:57 by aponomar         ###   ########.fr       */
+/*   Updated: 2020/01/30 22:40:21 by aponomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	zoom_figure(t_fdf *data)
 void	shift_figure(t_fdf *data)
 {
 	data->x += data->shift_x;
-    data->y += data->shift_y;
-    data->x1 += data->shift_x;
-    data->y1 += data->shift_y;
+	data->y += data->shift_y;
+	data->x1 += data->shift_x;
+	data->y1 += data->shift_y;
 }

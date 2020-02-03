@@ -6,7 +6,7 @@
 /*   By: aponomar <aponomar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/06 21:36:12 by aponomar          #+#    #+#             */
-/*   Updated: 2020/01/30 20:43:31 by aponomar         ###   ########.fr       */
+/*   Updated: 2020/02/02 15:50:33 by aponomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int			main(int argc, char **argv)
 {
 	t_fdf	*data;
 
-	if (argc > 0)
+	if (argc > 1)
 	{
 		data = (t_fdf*)malloc(sizeof(t_fdf));
 		read_file(argv[1], data);
@@ -45,6 +45,5 @@ int			main(int argc, char **argv)
 		mlx_loop(data->mlx_ptr);
 		free(data);
 	}
-	
 	return (0);
 }

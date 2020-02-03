@@ -6,7 +6,7 @@
 #    By: aponomar <aponomar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/21 15:35:39 by aponomar          #+#    #+#              #
-#    Updated: 2020/01/30 19:58:35 by aponomar         ###   ########.fr        #
+#    Updated: 2020/02/02 15:36:48 by aponomar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,11 +17,15 @@ FLAGS = -Wall -Wextra -Werror
 FRAMEWORKS = -framework OpenGL -framework AppKit
 SOURCE = *.c
 INCLUDE = libft/libft.a
+MIMILIBX = minilibx_macos/libmlx.a
+DEBUG = -g
 
 all:
-	gcc *.c $(FLAGS) libft/libft.a minilibx_macos/libmlx.a -o fdf $(FRAMEWORKS)
+	@make -C libft/ all
+	gcc *.c $(FLAGS) $(INCLUDE) $(MIMILIBX) $(DEBUG) -o $(NAME) $(FRAMEWORKS)
 	
 fclean:
-	rm -rf fdf
+	rm -rf $(NAME)
+	@make -C libft/ fclean
 
 re: fclean all

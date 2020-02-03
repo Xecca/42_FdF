@@ -6,47 +6,48 @@
 /*   By: aponomar <aponomar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/21 02:58:20 by aponomar          #+#    #+#             */
-/*   Updated: 2020/01/30 19:58:27 by aponomar         ###   ########.fr       */
+/*   Updated: 2020/02/02 15:57:17 by aponomar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
-int		get_height(char *file_name)
+int			get_height(char *file_name)
 {
-	char *line;
-	int fd;
-	int height;
+	char	*line;
+	int		fd;
+	int		height;
 
 	fd = open(file_name, O_RDONLY, 0);
 	height = 0;
-	while(get_next_line(fd, &line))
+	while (get_next_line(fd, &line))
 	{
 		height++;
 		free(line);
 	}
+	free(line);
 	close(fd);
 	return (height);
 }
 
-int		get_width(char *file_name)
+int			get_width(char *file_name)
 {
-	int width;
-	int fd;
-	char *line;
+	int		width;
+	int		fd;
+	char	*line;
 
 	fd = open(file_name, O_RDONLY, 0);
 	get_next_line(fd, &line);
-	width = ft_wdcount(line, ' '); //
+	width = ft_wdcount(line, ' ');
 	free(line);
 	close(fd);
 	return (width);
 }
 
-void	fill_matrix(int *z_line, char *line)
+void		fill_matrix(int *z_line, char *line)
 {
-	char **nums;
-	int i;
+	char	**nums;
+	int		i;
 
 	nums = ft_strsplit(line, ' ');
 	i = 0;
@@ -79,6 +80,7 @@ void		read_file(char *file_name, t_fdf *data)
 		free(line);
 		i++;
 	}
+	free(line);
 	close(fd);
-	data->z_matrix[i] = NULL;
+	free(data->z_matrix[i]);
 }
