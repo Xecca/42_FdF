@@ -13,10 +13,10 @@ This project allows to read coordinates from a text file and translate them into
 1. Clone project on your computer. :)
 2. Open directory with project in terminal. 
 3. Input follow command:
-        make re
-        ./fdf test_maps/name_map.fdf
-        For example:
-        *./fdf test_maps/pylone.fdf*
+        <br>make re
+        <br>./fdf test_maps/name_map.fdf
+        <br>For example:
+        <br>*./fdf test_maps/pylone.fdf*
 4. Use arrows and anothey keys for manipulation with figure.
 
 -------------------------------------------------------------
